@@ -1,0 +1,14 @@
+{
+  "name": "educacao-de-ouro",
+  "version": "1.0.0",
+  "title": "Totem - Educação de ouro",
+  "homepage": "http://www.yoursite.com.br",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-bower-concat": "^1.0.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
