@@ -1,22 +1,78 @@
-<!doctype html>
-<html lang="en" ng-app="educacaoDeOuroTotem">
+<!--DOCTYPE html -->
+<html>
 <head>
-    <meta charset="UTF-8">
-
+    <meta charset="utf-8">
+    <title>Educação de Ouro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#009688" />
 
-    <title>Check-in List - Educação de Ouro</title>
+    <meta name="keywords" content="bskit, bootstrap starter kit, bootstrap builder">
+	<meta name="description" content="Business Startup &amp; Prototyping HTML Framework">
+	
+	<link rel="shortcut icon" href="favicon.png">
+	
+	<!-- Core CSS -->
+    <link href="dist/css/stylesheets.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="dist/css/main.css">
 </head>
-<body>
+<body id="home">
+    
+    <div id="page" class="page">
+        
+		<!-- HEADER 2 -->
+		<header id="header-2">
 
-<ng-include src="'partials/header.html'"></ng-include>
+			<nav class="main-nav navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<div class="navbar-header">
+						<img src="dist/images/logo-educacao-de-ouro.png" class="brand-img img-responsive">
+					</div>
+				</div>
+			</nav>
 
-<div class="container" ng-view></div>
+		</header>
+		<!-- // End HEADER 2 -->
 
-<script src="dist/js/bower.min.js"></script>
-<script src="dist/js/main.min.js"></script>
+        <section class="btn-container">
+            <a class="btn green btn-small">
+                <span>Botão Verde</span>
+            </a>
+
+            <a class="btn pink btn-middle">
+                <span>Botão Rosa</span>
+            </a>
+
+            <a class="btn blue btn-larger">
+                <span>Botão Azul</span>
+            </a>
+        </section>
+
+		<!-- Start Footer 1-3 -->
+		<section class="content-block-nopad bg-deepocean">
+			<div class="container footer-1-3">
+				<div class="col-xs-12 footer-text">
+					<div class="editContent">
+						<row>
+                            <div class="col-md-4">
+                                <p><i class="fa fa-check icon-green" aria-hidden="true"></i> 10 pessoas passaram por aqui</p>
+                            </div>
+
+                            <div class="col-md-4">
+                                <p><i class="fa fa-heart icon-pink" aria-hidden="true"></i> 7 gostaram do nosso projeto</p>
+                            </div>
+
+                            <div class="col-md-4">
+                                <p><i class="fa fa-thumbs-down icon-blue" aria-hidden="true"></i> 3 pessoas não curtiram muito nosso projeto</p>
+                            </div>
+                        </row>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--// END Footer 1-3 -->
+
+	</div><!-- /#page -->
+
+
+	<script type="text/javascript" src="dist/js/scripts.js"></script>
 </body>
 </html>

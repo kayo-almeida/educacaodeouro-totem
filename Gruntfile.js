@@ -1,60 +1,45 @@
-module.exports = function( grunt ) {
+module.exports = function (grunt) {
 
     grunt.initConfig({
         concat: {
-            basic: {
-                src: ['src/js/**/*'],
-                dest: 'dist/js/main.js',
-            }
-        }, //concat
-
-        bower_concat: {
-            all: {
-                dest: 'dist/js/bower.min.js'
-            }
-        }, // bower_concat
-
-        uglify : {
-            options : {
-                sourceMap: true,
-                mangle : false
+            js: {
+                src: ['src/js/jquery-1.11.1.min.js', 'src/js/bootstrap.min.js', 'src/js/main.js'],
+                dest: 'dist/js/scripts.js'
             },
-
-            my_target : {
-                files : {
-                    'dist/js/main.min.js' : [ 'dist/js/main.js' ]
+            css: {
+                src: 'src/css/*.css',
+                dest: 'dist/css/stylesheets.css'
+            }
+        },
+        cssmin: {
+            options: {
+                shorthandCompacting: false,
+                roundingPrecision: -1
+            },
+            target: {
+                files: {
+                    'dist/css/stylesheets.min.css': ['dist/css/stylesheets.css']
                 }
             }
-        }, // uglify
-
-        clean: {
-            js: ["dist/js/**/*.js", "!dist/js/**/*.min.js"]
-        }, //clean
-
-        watch: {
-            scripts: {
-                files: ['src/js/**/*'],
-                tasks: ['concat', 'uglify', 'clean'],
-                options: {
-                    spawn: false,
-                }
+        },
+        minified : {
+            files: {
+                src: ['dist/js/scripts.js'],
+                dest: 'dist/js/'
+            },
+            options : {
+                sourcemap: true,
+                allinone: false
             }
         }
-
     });
 
 
     // Plugins do Grunt
-    grunt.loadNpmTasks( 'grunt-contrib-concat' );
-    grunt.loadNpmTasks( 'grunt-contrib-uglify' );
-    grunt.loadNpmTasks( 'grunt-contrib-watch' );
-    grunt.loadNpmTasks( 'grunt-contrib-clean' );
-    grunt.loadNpmTasks( 'grunt-bower-concat' );
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-minified');
 
     // Tarefas que serão executadas
-    grunt.registerTask( 'default', [ 'bower_concat', 'concat', 'uglify' , 'clean'] );
-
-    // Tarefa para Watch
-    grunt.registerTask( 'w', [ 'watch'] );
-
+    grunt.registerTask('default', ['concat', 'cssmin', 'minified']);
 };

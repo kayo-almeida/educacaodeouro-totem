@@ -1,0 +1,64 @@
+.btn {
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0 !important;
+}
+.btn span {
+    display: block;
+}
+
+/* TAMANHOS */
+.btn.btn-small {
+    font-size: 14px !important;
+    line-height: 45px;
+    height: 50px;
+    width: 200px;
+}
+
+.btn.btn-small span {
+    height: 45px;
+}
+
+.btn.btn-middle {
+    font-size: 28px !important;
+    line-height: 90px;
+    height: 100px;
+    width: 400px;
+}
+
+.btn.btn-middle span {
+    height: 90px;
+}
+
+.btn.btn-larger {
+    font-size: 48px !important;
+    line-height: 180px;
+    height: 200px;
+    width: 800px;
+}
+
+.btn.btn-larger span {
+    height: 180px;
+}
+
+/* CORES */
+.btn.green {
+    background-color: #16856a;
+}
+.btn.green span {
+    background-color: #16a085;
+}
+
+.btn.blue {
+    background-color: #72a8d2;
+}
+.btn.blue span {
+    background-color: #85c6f7;
+}
+
+.btn.pink {
+    background-color: #bd2040;
+}
+.btn.pink span {
+    background-color: #ff2a54;
+}
