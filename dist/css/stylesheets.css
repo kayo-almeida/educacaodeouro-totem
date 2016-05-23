@@ -42,7 +42,21 @@
 }
 
 .btn-row {
-    padding: 240px 0;
+    /*padding: 240px 0;*/
+}
+
+.thanks-text p {
+    font-size: 5em;
+}
+
+.opacity0 {
+    opacity: 0;
+    transition:opacity 0.3s linear;
+}
+
+.opacity1 {
+    opacity: 1;
+    transition:opacity 0.6s linear;
 }
 /*!
  *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome

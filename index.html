@@ -34,14 +34,21 @@
 
         <div class="vertical-center">
             <div class="container">
-                <div class="row btn-row">
+
+                <div class="row thanks-text opacity0">
+                    <div class="col-md-12 text-center pad30">
+                        <p>Muito obrigado <i class="fa fa-heart icon-pink" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+
+                <div class="row btn-row" id="check-container">
                     <div class="col-md-12">
-                        <a class="btn green" id="btn-central" id="check-in">
+                        <a class="btn green" id="check-in">
                             <span><i class="fa fa-check" aria-hidden="true"></i> Passei por aqui</span>
                         </a>
                     </div>
                 </div>
-                <div class="row btn-row hidden">
+                <div class="row btn-row hidden" id="actions-container">
                     <div class="col-md-6">
                         <a class="btn blue" id="dislike">
                             <span><i class="fa fa-thumbs-down" aria-hidden="true"></i> Não Gostei</span>
@@ -63,15 +70,15 @@
 					<div class="editContent">
 						<row>
                             <div class="col-md-4">
-                                <p><i class="fa fa-check icon-green" aria-hidden="true"></i> 10 pessoas passaram por aqui</p>
+                                <p><i class="fa fa-check icon-green" aria-hidden="true"></i> <span id="count-checks">0</span> pessoas passaram por aqui</p>
                             </div>
 
                             <div class="col-md-4">
-                                <p><i class="fa fa-heart icon-pink" aria-hidden="true"></i> 7 gostaram do nosso projeto</p>
+                                <p><i class="fa fa-heart icon-pink" aria-hidden="true"></i> <span id="count-likes">0</span> gostaram do nosso projeto</p>
                             </div>
 
                             <div class="col-md-4">
-                                <p><i class="fa fa-thumbs-down icon-blue" aria-hidden="true"></i> 3 pessoas não curtiram muito nosso projeto</p>
+                                <p><i class="fa fa-thumbs-down icon-blue" aria-hidden="true"></i> <span id="count-dislikes">0</span> pessoas não curtiram muito nosso projeto</p>
                             </div>
                         </row>
 					</div>
